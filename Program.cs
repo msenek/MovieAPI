@@ -10,11 +10,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-
 // DbContext
+var dbPath = Path.Combine(builder.Environment.ContentRootPath, "app.db");
+
 builder.Services.AddDbContext<MovieContex>(options =>
-    options.UseSqlite("Data Source=app.db")
+    options.UseSqlite($"Data Source={dbPath}")
 );
+
 
 var app = builder.Build();
 

@@ -6,8 +6,8 @@ namespace MovieAPI.DB
     public class MovieContex : DbContext
     {
 
-        public DbSet<Movie> Movies;
-            public MovieContex(DbContextOptions<MovieContex> options) : base(options)
+        public DbSet<Movie> Movies { get; set; }
+        public MovieContex(DbContextOptions<MovieContex> options) : base(options)
         {  
         }
     }
