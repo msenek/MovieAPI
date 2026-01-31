@@ -15,7 +15,8 @@ Supports basic CRUD operations and Swagger for testing.
 - ASP.NET Core 10
 - Entity Framework Core
 - SQLite
-- Swagger / OpenAPI
+- Swagger
+- C#
 
 ## Setup
 
