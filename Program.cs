@@ -10,10 +10,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddAuthorization(options =>
-{
-    options.FallbackPolicy = options.DefaultPolicy;
-});
 
 // DbContext
 builder.Services.AddDbContext<MovieContex>(options =>
@@ -29,7 +25,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
 
 app.MapControllers();
 
